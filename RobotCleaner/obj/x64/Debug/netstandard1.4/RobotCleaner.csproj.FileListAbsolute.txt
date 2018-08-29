@@ -1,0 +1,12 @@
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\bin\x64\Debug\netstandard1.4\RobotCleaner.deps.json
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\bin\x64\Debug\netstandard1.4\RobotCleaner.runtimeconfig.json
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\bin\x64\Debug\netstandard1.4\RobotCleaner.runtimeconfig.dev.json
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\bin\x64\Debug\netstandard1.4\RobotCleaner.dll
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\bin\x64\Debug\netstandard1.4\RobotCleaner.pdb
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\obj\x64\Debug\netstandard1.4\RobotCleaner.csprojAssemblyReference.cache
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\obj\x64\Debug\netstandard1.4\RobotCleaner.csproj.CoreCompileInputs.cache
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\obj\x64\Debug\netstandard1.4\RobotCleaner.AssemblyInfo.cs
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\obj\x64\Debug\netstandard1.4\RobotCleaner.dll
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\obj\x64\Debug\netstandard1.4\RobotCleaner.pdb
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\obj\x64\Debug\netstandard1.4\RobotCleaner.Properties.Resources.resources
+C:\Users\Rackley\source\repos\RobotCleaner\RobotCleaner\obj\x64\Debug\netstandard1.4\RobotCleaner.csproj.GenerateResource.cache
