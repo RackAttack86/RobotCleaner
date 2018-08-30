@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RobotCleaner;
 
@@ -15,24 +14,6 @@ namespace RobotCleanerTests
             CleaningRobot robot = CreateTesterRobot(10, 22);
             Assert.AreEqual(10, robot.XCoordinate);
             Assert.AreEqual(22, robot.YCoordinate);
-            Assert.AreEqual(1, robot.TotalUniqueSpacesCleaned);
-        }
-
-        [TestMethod]
-        public void IsNewSpot_ReturnsTrue()
-        {
-            int x = 15, y = 33;
-            CleaningRobot robot = CreateTesterRobot(x, y);
-            Assert.IsTrue(robot.IsNewSpot(x + 1, y));
-
-        }
-
-        [TestMethod]
-        public void IsNewSpot_ReturnsFalse()
-        {
-            int x = 10, y = 22;
-            CleaningRobot robot = CreateTesterRobot(x, y);
-            Assert.IsFalse(robot.IsNewSpot(x, y));
         }
 
         [TestMethod]

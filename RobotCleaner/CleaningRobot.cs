@@ -5,19 +5,17 @@ namespace RobotCleaner
 {
     public class CleaningRobot
     {
-        public int XCoordinate { get; set; }
-        public int YCoordinate { get; set; }
-        public int TotalUniqueSpacesCleaned { get; private set; }
-        private Dictionary<(int xCoordinate, int yCoordinate), char> CoordinatesAlreadyCleaned { get; }        
+        public int XCoordinate { get; private set; }
+        public int YCoordinate { get; private set; }
+        private HashSet<(int xCoordinate, int yCoordinate)> CoordinatesAlreadyCleaned { get; }
 
         public CleaningRobot(int x, int y)
         {
             XCoordinate = x;
             YCoordinate = y;
-            CoordinatesAlreadyCleaned = new Dictionary<(int, int), char>();
-            CoordinatesAlreadyCleaned.Add(CreateTuple(x, y), 'x');
-            TotalUniqueSpacesCleaned = 1;
-            
+            CoordinatesAlreadyCleaned = new HashSet<(int, int)>();
+            CoordinatesAlreadyCleaned.Add((x, y));
+
         }
 
         public int RunRobot(List<(string direction, int spaces)> movementCommands)
@@ -26,12 +24,8 @@ namespace RobotCleaner
             {
                 Move(command.direction, command.spaces);
             }
-            return TotalUniqueSpacesCleaned;
-        }
 
-        public bool IsNewSpot(int x, int y)
-        {
-            return !CoordinatesAlreadyCleaned.ContainsKey(CreateTuple(x, y));
+            return CoordinatesAlreadyCleaned.Count;
         }
 
         public void Move(string direction, int spaces)
@@ -53,25 +47,9 @@ namespace RobotCleaner
                         XCoordinate -= 1;
                         break;
                 }
-                UpdateUniqueCleanedSpaces(XCoordinate, YCoordinate);
+
+                CoordinatesAlreadyCleaned.Add((XCoordinate, YCoordinate));
             }
         }
-
-        #region Helper Methods
-
-        private void UpdateUniqueCleanedSpaces(int x, int y)
-        {
-            if (IsNewSpot(x, y))
-            {
-                TotalUniqueSpacesCleaned += 1;
-                CoordinatesAlreadyCleaned.Add(CreateTuple(x, y), 'x');
-            }
-        }
-
-        private (int, int) CreateTuple(int x, int y)
-        {
-            return (x, y);
-        }
-        #endregion
     }
 }
